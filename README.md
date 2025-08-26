@@ -413,6 +413,7 @@ reqsock:peek
 Peeks into the [preread](https://nginx.org/en/docs/stream/stream_processing.html#preread_phase)
 buffer that contains downstream data sent by the client without consuming them.
 That is, data returned by this API will still be forwarded upstream in later phases.
+It works for both TCP and UDP streams with identical semantics.
 
 This function takes a single required argument, `size`, which is the number of bytes to be peeked.
 Repeated calls to this function always returns data from the beginning of the preread buffer.
